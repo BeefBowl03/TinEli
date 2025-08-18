@@ -30,6 +30,58 @@ const HeroBanner: React.FC = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const handleSaveTheDate = () => {
+    // Create calendar event data
+    const event = {
+      title: 'Eleazar & Kristine Wedding',
+      description: 'Join us for our special day! We can\'t wait to celebrate with you.',
+      location: 'Wedding Venue', // You can update this with actual venue
+      startTime: '2025-10-04T14:00:00',
+      endTime: '2025-10-04T22:00:00', // Assuming 8-hour event
+      organizer: 'Eleazar & Kristine'
+    };
+
+    // Generate iCalendar content
+    const icsContent = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//TinEli Wedding//Wedding Event//EN',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      'BEGIN:VEVENT',
+      `UID:${Date.now()}@tinewedding.com`,
+      `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z`,
+      `DTSTART:${event.startTime.replace(/[-:]/g, '').split('.')[0]}Z`,
+      `DTEND:${event.endTime.replace(/[-:]/g, '').split('.')[0]}Z`,
+      `SUMMARY:${event.title}`,
+      `DESCRIPTION:${event.description}`,
+      `LOCATION:${event.location}`,
+      `ORGANIZER;CN=${event.organizer}`,
+      'STATUS:CONFIRMED',
+      'SEQUENCE:0',
+      'BEGIN:VALARM',
+      'TRIGGER:-PT1D',
+      'ACTION:DISPLAY',
+      'DESCRIPTION:Reminder: Tomorrow is Eleazar & Kristine\'s Wedding!',
+      'END:VALARM',
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\r\n');
+
+    // Create a Blob with the iCalendar content
+    const blob = new Blob([icsContent], { type: 'text/calendar' });
+    const url = URL.createObjectURL(blob);
+
+    // Create a temporary anchor element
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Eleazar_Kristine_Wedding.ics'; // Suggest a filename
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="hero-banner">
       <div className="hero-background">
@@ -71,7 +123,7 @@ const HeroBanner: React.FC = () => {
           </div>
         </div>
 
-        <button className="cta-button">SAVE THE DATE</button>
+        <button className="cta-button" onClick={handleSaveTheDate}>SAVE THE DATE</button>
       </div>
     </div>
   );
