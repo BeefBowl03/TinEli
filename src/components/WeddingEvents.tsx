@@ -33,7 +33,7 @@ const WeddingEvents: React.FC = () => {
               <div className="detail-item">
                 <div className="detail-icon">📅</div>
                 <div className="detail-content">
-                  <div className="date">Friday 10</div>
+                  <div className="date">Saturday 4</div>
                   <div className="date">October, 2025</div>
                 </div>
               </div>
@@ -68,7 +68,7 @@ const WeddingEvents: React.FC = () => {
               <div className="detail-item">
                 <div className="detail-icon">📅</div>
                 <div className="detail-content">
-                  <div className="date">Friday 10</div>
+                  <div className="date">Saturday 4</div>
                   <div className="date">October, 2025</div>
                 </div>
               </div>
