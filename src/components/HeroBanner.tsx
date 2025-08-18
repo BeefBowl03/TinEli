@@ -38,7 +38,7 @@ const HeroBanner: React.FC = () => {
       </div>
       
       <header className="hero-header">
-        <div className="logo">Wedding.</div>
+        <div className="logo">TinEli</div>
         <nav className="navigation">
           <a href="#home">HOME</a>
           <a href="#story">STORY</a>
