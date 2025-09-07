@@ -1,0 +1,39 @@
+.upload-qr {
+  padding: 80px 16px;
+  background-color: #fFFF; /* same tone as gallery */
+}
+
+.upload-qr__container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.upload-qr__title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 44px;
+  color: #e91e63;
+  margin: 0 0 8px;
+}
+
+.upload-qr__subtitle {
+  color: #6b7280;
+  margin: 0 0 24px;
+}
+
+.upload-qr__card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  padding: 18px 18px 14px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(16,24,40,0.08);
+}
+
+.upload-qr__image { width: 280px; height: 280px; display: block; }
+
+.upload-qr__link { color: #e91e63; text-decoration: none; font-weight: 600; }
+
+

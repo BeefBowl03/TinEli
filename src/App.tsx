@@ -8,6 +8,7 @@ import MapSection from './components/MapSection';
 import WeddingDetails from './components/WeddingDetails';
 import './App.css';
 import ClosingSection from './components/ClosingSection';
+import UploadQR from './components/UploadQR';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <WeddingGallery />
       <MapSection />
       <WeddingDetails />
+      <UploadQR />
       <ClosingSection />
     </div>
   );
