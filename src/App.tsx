@@ -17,8 +17,8 @@ function App() {
       <WeddingEvents />
       <OurStory />
       <WeddingGallery />
-      <WeddingDetails />
       <MapSection />
+      <WeddingDetails />
       <ClosingSection />
     </div>
   );
