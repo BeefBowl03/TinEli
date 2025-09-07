@@ -30,7 +30,7 @@ const MapSection: React.FC = () => {
               </div>
               <div className="map-card-line">
                 <span className="map-icon" aria-hidden>📅</span>
-                <span>Saturday 4<br/>October, 2025</span>
+                <span>Saturday<br/> 4October, 2025</span>
               </div>
               <div className="map-card-line">
                 <span className="map-pin" aria-hidden>📍</span>
