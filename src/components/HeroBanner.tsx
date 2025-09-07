@@ -36,8 +36,8 @@ const HeroBanner: React.FC = () => {
       title: 'Eleazar & Kristine Wedding',
       description: 'Join us for our special day! We can\'t wait to celebrate with you.',
       location: 'Wedding Venue', // You can update this with actual venue
-      startTime: '2025-10-04T14:00:00',
-      endTime: '2025-10-04T22:00:00', // Assuming 8-hour event
+      startTime: '2025-10-04T08:00:00',
+      endTime: '2025-10-04T23:59:00',
       organizer: 'Eleazar & Kristine'
     };
 
@@ -51,8 +51,8 @@ const HeroBanner: React.FC = () => {
       'BEGIN:VEVENT',
       `UID:${Date.now()}@tinewedding.com`,
       `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z`,
-      `DTSTART:${event.startTime.replace(/[-:]/g, '').split('.')[0]}Z`,
-      `DTEND:${event.endTime.replace(/[-:]/g, '').split('.')[0]}Z`,
+      `DTSTART;TZID=Asia/Manila:${event.startTime.replace(/[-:]/g, '').split('.')[0]}`,
+      `DTEND;TZID=Asia/Manila:${event.endTime.replace(/[-:]/g, '').split('.')[0]}`,
       `SUMMARY:${event.title}`,
       `DESCRIPTION:${event.description}`,
       `LOCATION:${event.location}`,
@@ -91,13 +91,7 @@ const HeroBanner: React.FC = () => {
       
       <header className="hero-header">
         <div className="logo">TinEli</div>
-        <nav className="navigation">
-          <a href="#home">HOME</a>
-          <a href="#story">STORY</a>
-          <a href="#services">SERVICES</a>
-          <a href="#gallery">GALLERY</a>
-          <a href="#contact">CONTACT</a>
-        </nav>
+        
       </header>
 
       <div className="hero-content">

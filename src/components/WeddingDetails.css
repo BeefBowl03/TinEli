@@ -1,0 +1,54 @@
+.wedding-details {
+  padding: 80px 16px;
+  background-color: #f7f5f2; /* same as Wedding Gallery */
+}
+
+.details-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.details-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 44px;
+  color: #e91e63;
+  margin: 0 0 24px;
+}
+
+.details-frame {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.details-card {
+  padding: 0;
+  background: transparent;
+  border: none;
+  max-height: 1120px;
+}
+
+.details-card-inner {
+  border-radius: 18px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.details-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 820px) {
+  .details-grid { grid-template-columns: 1fr; }
+}
+
+

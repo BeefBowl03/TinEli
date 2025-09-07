@@ -1,0 +1,116 @@
+.map-section {
+  background: #ffffff;
+  padding: 80px 16px;
+}
+
+.map-header {
+  max-width: 1200px;
+  margin: 0 auto 16px;
+  text-align: center;
+}
+
+.map-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 32px;
+  align-items: start;
+}
+
+.map-left {
+  width: 100%;
+}
+
+.map-frame {
+  background: #fff;
+  border: 2px solid #2b2b2b;
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 480px;
+  border: 0;
+  border-radius: 12px;
+  display: block;
+  background: #f8fafc;
+}
+
+.map-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.map-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 44px;
+  color: #e91e63;
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.map-heading {
+  margin: 0;
+  font-size: 18px;
+  color: #111827;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.map-card {
+  width: 100%;
+  background: transparent;
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-card-content {
+  padding: 16px 18px;
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+/* removed inline title inside card; moved to section title */
+
+.map-card-line {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+  justify-content: center;
+}
+
+.map-label-strong {
+  font-weight: 700;
+}
+
+.map-dot {
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 999px;
+  border: 2px solid rgba(255,255,255,0.7);
+}
+
+.map-pin {
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));
+}
+
+@media (max-width: 900px) {
+  .map-container {
+    grid-template-columns: 1fr;
+  }
+
+  .map-right { order: 2; }
+  .map-left  { order: 1; }
+}
+
+

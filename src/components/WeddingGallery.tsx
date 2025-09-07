@@ -213,19 +213,7 @@ const WeddingGallery: React.FC = () => {
             ›
           </button>
 
-          <div className="gallery-dots" role="tablist" aria-label="Slide dots">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                role="tab"
-                aria-selected={index === currentIndex}
-                className={index === currentIndex ? 'dot is-active' : 'dot'}
-                onClick={() => goTo(index)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
+          {/* Dots removed by request */}
         </div>
       </div>
     </section>

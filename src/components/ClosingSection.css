@@ -1,0 +1,42 @@
+.closing-section {
+  position: relative;
+  padding: 100px 16px;
+  background-size: cover;
+  background-position: center;
+}
+
+.closing-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.closing-content {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+}
+
+.closing-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 44px;
+  margin: 0 0 12px;
+  color: #ffebf1;
+}
+
+.closing-text {
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+@media (min-width: 1024px) {
+  .closing-section {
+    background-position: center 40%;
+  }
+}
+
+

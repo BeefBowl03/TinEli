@@ -4,7 +4,10 @@ import AboutSection from './components/AboutSection';
 import WeddingEvents from './components/WeddingEvents';
 import OurStory from './components/OurStory';
 import WeddingGallery from './components/WeddingGallery';
+import MapSection from './components/MapSection';
+import WeddingDetails from './components/WeddingDetails';
 import './App.css';
+import ClosingSection from './components/ClosingSection';
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
       <WeddingEvents />
       <OurStory />
       <WeddingGallery />
+      <WeddingDetails />
+      <MapSection />
+      <ClosingSection />
     </div>
   );
 }
