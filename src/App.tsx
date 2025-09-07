@@ -3,6 +3,7 @@ import HeroBanner from './components/HeroBanner';
 import AboutSection from './components/AboutSection';
 import WeddingEvents from './components/WeddingEvents';
 import OurStory from './components/OurStory';
+import WeddingGallery from './components/WeddingGallery';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <AboutSection />
       <WeddingEvents />
       <OurStory />
+      <WeddingGallery />
     </div>
   );
 }
